@@ -10,10 +10,7 @@ namespace Rock_Scissors_Paper
             string[] computerChoice = { "Rock", "Scissors", "Paper" };
 
             while (true)
-            {
-                Random rnd = new Random();
-                int index = rnd.Next(0, 3);
-
+            {                
                 StartGame:
 
                 Console.Clear();
@@ -45,6 +42,8 @@ namespace Rock_Scissors_Paper
                         
                 }
 
+                Random rnd = new Random();
+                int index = rnd.Next(0, 3);
                 string computer = computerChoice[index];
 
                 Console.WriteLine();
