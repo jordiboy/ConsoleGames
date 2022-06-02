@@ -2,7 +2,7 @@
 
 namespace Rock_Scissors_Paper
 {
-    class Program
+    class Rock_Scissors_Paper
     {
         static void Main(string[] args)
         {            
