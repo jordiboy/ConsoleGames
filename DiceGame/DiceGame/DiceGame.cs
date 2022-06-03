@@ -21,13 +21,15 @@ namespace DiceGame
             for (int round = 1; round <= 10; round++)
             {
                 int computer = rnd.Next(1, 7);
-                int player = rnd.Next(1, 7);
 
                 Console.WriteLine($"Round {round}");
                 Console.WriteLine();
                 Console.WriteLine($"Computer rolled: {computer}");
                 Console.Write("Press [Enter] to roll the dice...");
                 Console.ReadLine();
+
+                int player = rnd.Next(1, 7);
+
                 Console.WriteLine($"You rolled: {player}");                
 
                 if (computer > player)
