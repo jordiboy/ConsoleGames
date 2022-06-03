@@ -6,8 +6,9 @@ namespace Rock_Scissors_Paper
     {
         static void Main(string[] args)
         {            
-            int[] result = new int[3];              // i0 = playerWins, i1 = computerWins, i2 == draw            
+            int[] result = new int[3];              // i0 = playerWins, i1 = computerWins, i2 = draw            
             string[] computerChoice = { "Rock", "Scissors", "Paper" };
+            Random rnd = new Random();
 
             while (true)
             {                
@@ -26,23 +27,13 @@ namespace Rock_Scissors_Paper
 
                 switch (playerChoice)
                 {
-                    case 'r':
-                        player = "Rock";
-                        break;
-                    case 's':
-                        player = "Scissors";
-                        break;
-                    case 'p':
-                        player = "Paper";
-                        break;
-                    case 'e':
-                        return;                        
-                    default:                        
-                        goto StartGame;
-                        
+                    case 'r': player = "Rock"; break;
+                    case 's': player = "Scissors"; break;
+                    case 'p': player = "Paper"; break;
+                    case 'e': return;                        
+                    default: goto StartGame;                        
                 }
-
-                Random rnd = new Random();
+                
                 int index = rnd.Next(0, 3);
                 string computer = computerChoice[index];
 
@@ -72,7 +63,7 @@ namespace Rock_Scissors_Paper
                 Console.WriteLine();
                 Console.WriteLine($"Current Result is: Player {result[0]} | Computer {result[1]} | Draw {result[2]}");
                 Console.WriteLine();
-                Console.WriteLine("Press 'Enter' to continue...");
+                Console.WriteLine("Press [Enter] to continue...");
                 Console.ReadLine();
             }
         }
