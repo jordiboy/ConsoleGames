@@ -28,8 +28,7 @@ namespace Lotto
                 Console.WriteLine();
                 Console.WriteLine("Please enter your numbers. They must be between 1 to 35");
                 Console.WriteLine();
-                Console.WriteLine($"Your numbers : {playerNumbers[0]}, {playerNumbers[1]}, {playerNumbers[2]}," +
-                    $" {playerNumbers[3]}, {playerNumbers[4]}");
+                Console.WriteLine($"Your numbers : {string.Join(", ", playerNumbers)}");
                 Console.Write($"{i + 1} number: ");
                 int input = int.Parse(Console.ReadLine());
 
@@ -65,10 +64,8 @@ namespace Lotto
             }
 
             Console.Clear();
-            Console.WriteLine($"Your numbers are: {playerNumbers[0]}, {playerNumbers[1]}, {playerNumbers[2]}," +
-                    $" {playerNumbers[3]}, {playerNumbers[4]}");
-            Console.WriteLine($"Lotto numbers are: {lottoNumbers[0]}, {lottoNumbers[1]}, {lottoNumbers[2]}," +
-                $" {lottoNumbers[3]}, {lottoNumbers[4]}");            
+            Console.WriteLine($"Your numbers are: {string.Join(", " , playerNumbers)}");                        
+            Console.WriteLine($"Lotto numbers are: {string.Join(", ", lottoNumbers)}");            
 
             int countGuessed = 0;
             Stack<int> numbers = new Stack<int>();
