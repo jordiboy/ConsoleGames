@@ -36,14 +36,14 @@ namespace GuessTheNumber
             Console.WriteLine($"The number is: {num}, and you guess it from {counter} time.");
             Console.WriteLine();
             Thread.Sleep(3000);
-            Console.Write("Now, let's change the role, write me a number and I'll gess it:");
+            Console.Write("Now, let's change the role, write me a number and I'll gess it: ");
             int number = int.Parse(Console.ReadLine());
             Console.WriteLine();
             Console.WriteLine($"Ha, ha, humas! Your number is: {number}");
             Console.WriteLine("When you write a number, I'll always know it.");
             Thread.Sleep(7000);
             Console.WriteLine(); 
-            Console.WriteLine("Now, seriosly, think about a number and keep it in your mind");
+            Console.WriteLine("Now, seriosly, think about a number and keep it in your mind.");
             Console.WriteLine("Just write me, if is 'bigger' or 'smaller' from my guess.");
             Console.WriteLine("And if I guess it, write 'right'.");
             Console.WriteLine();
@@ -52,7 +52,7 @@ namespace GuessTheNumber
             Console.ReadLine();
             Console.WriteLine();
                         
-            counter = 0;
+            counter = 1;
             int lower = 0;
             int higher = 100;
             num = rnd.Next(lower, higher);
